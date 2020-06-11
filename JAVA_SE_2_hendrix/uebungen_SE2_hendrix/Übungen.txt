@@ -1,0 +1,71 @@
+�bung 16
+
+Schreiben Sie eine Klasse Rechteck mit den Attributen Breite, 
+L�nge und Farbe und �berschreiben Sie sinnvoll die Methoden equals und hashcode.
+
+ 
+
+Übung 17
+
+Schreiben Sie eine Klasse zum Speichern von Integer-Werten. Zur Speicherung der Werte soll die Klasse als Attribut eine ArrayList besitzen. Ferner soll die Klasse folgende Methoden beinhalten:
+
+Methode zum Speichern eines einzelnen int-Wertes
+Methode zum Speichern eines kompletten Arrays mit int-Werten
+Methode zum Löschen eines einzelnen int-Wertes
+Methode zur Feststellung, ob ein bestimmter int-Wert schon in der ArrayList gespeichert ist
+Methode zum aufsteigenden Sortieren der ArrayList
+ 
+
+Übung 18
+
+Schreiben Sie eine Klasse zum Speichern von Objekten der Klasse Rechteck. Dabei sollen die Objekte in einer LinkedList gespeichert werden. Die Klasse soll folgende Methoden besitzen:
+
+Methode zum Speichern eines Objektes (Anhängen an die Liste)
+Methode zum Löschen eines Objektes
+Methode zur Ausgabe der Länge und Breite aller Rechteck-Objekte in der Liste mit Hilfe eines ListIterator-Objektes
+ 
+
+Übung 19
+
+Erzeugen Sie eine neue Exception NoBinaryNumberException, die von der Klasse RuntimeException abgeleitet ist. Sie soll neben den beiden Standardkonstruktoren einen weiteren Konstruktor besitzen, der einen String (eine Binärzahl in der Form "10001110") sowie die Position, die die Exception ausgelöst hat, entgegennimmt.
+
+Schreiben Sie eine Klasse ConvertBinary, die eine im String-Format übergebene Binärzahl in einen int-Typ umwandelt. Wird keine korrekte Zahl zur Umwandlung übergeben, soll eine Exception vom Typ NoBinaryNumberException ausgelöst werden.
+
+Schreiben Sie eine Klasse ConvertBinaryTest zum Testen der Umwandlung.
+
+ 
+
+Übung 20
+
+Einem Programm sollen zwei Parameter übergeben werden. Überprüfen Sie die korrekte Anzahl der Parameter über eine Assertion.
+
+Starten Sie das Programm mit und ohne Verwendung von Assertions.
+
+ 
+
+Übung 21
+
+Schreiben Sie die Zahlen von 1 bis 1000 und die jeweils zugehörige Quadratzahl in eine Datei quadratzahlen.dat.
+
+Lesen Sie die Werte wieder ein und geben die Daten in folgender Weise aus:
+. . .
+Quadrat von 25 = 625
+Quadrat von 26 = 676
+. . .
+
+ 
+
+Übung 22
+
+Erstellen Sie eine Anwendung zur Erfassung von Personendaten. Dazu sind über die Tastatur folgende Daten abzufragen: Name, Geschlecht, Größe (in cm) und Gewicht (in kg). Lesen Sie die Daten erst in einen Puffer und schreiben Sie die eingegebenen Werte dann in eine Datei.
+
+ 
+
+Übung 23
+
+Erstellen Sie eine Filterklasse MyFilterWriter, welche die Ausgaben in eine Datei so filtert, dass nur Groß- und Kleinbuchstaben in die Datei geschrieben werden. Alle anderen Zeichen sind durch das Zeichen * zu ersetzen. Gehen Sie dabei wie folgt vor:
+
+Leiten Sie Ihre Filterklasse von der abstrakten Klasse FilterWriter ab.
+Rufen Sie im Konstruktor Ihrer Filterklasse den Konstruktor der Superklasse mit dem übergebenen Writer-Objekt auf.
+Überschreiben Sie die drei write-Methoden der Klasse FilterWriter.
+Testen Sie Ihre Filterklasse in einem Programm FilterCharacters.java. Dazu soll über die Tastatur eine Zeichenkette eingegeben werden, die dann gefiltert in die Datei filter.dat geschrieben wird.
