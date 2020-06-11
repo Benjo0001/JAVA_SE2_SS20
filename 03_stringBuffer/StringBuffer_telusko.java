@@ -17,6 +17,8 @@ public class StringBuffer_telusko {
         // System.out.println(sbf.toString());
         System.out.println(sbf);  // automatically converts to String
 
+        // hier morgen weiter ...
+        // test GIT
     }
     
 }
