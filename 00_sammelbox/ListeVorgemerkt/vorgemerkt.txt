@@ -9,3 +9,4 @@ offene Programmierung:
 
 Hendrix Übungen 
     Übung13 -> Name und Package der methode ausgeben
+    Übung17 -> unklar was eigentlich gewollt

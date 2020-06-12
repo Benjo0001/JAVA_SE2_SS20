@@ -1,4 +1,4 @@
-abstract class Konto {
+public abstract class Konto {
     protected int kontonummer;
     protected String name;
     protected double kontostand;
