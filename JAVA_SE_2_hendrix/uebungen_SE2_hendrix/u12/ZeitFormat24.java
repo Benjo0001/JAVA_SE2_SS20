@@ -11,12 +11,13 @@ public class ZeitFormat24 extends ZeitFormat {
     ZeitFormat24(int stunde, int minute){
         super(stunde, minute);
     }
-
+    
+    @Override
     public void printTime(){
-        int h1 = getStunde()/10;
-        int h2 = getStunde()%10;
-        int m1 = getMinute()/10;
-        int m2 = getMinute()%10;
+        int h1 = super.getStunde()/10;
+        int h2 = super.getStunde()%10;
+        int m1 = super.getMinute()/10;
+        int m2 = super.getMinute()%10;
         System.out.printf("Uhrzeit: %d%d:%d%d%n", h1,h2,m1,m2 );
         // System.out.println("Uhrzeit: "+ this.getStunde() + ":" + this.getMinute() );
     }
