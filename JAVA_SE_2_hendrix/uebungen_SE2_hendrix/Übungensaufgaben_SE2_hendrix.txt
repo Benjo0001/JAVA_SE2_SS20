@@ -1,0 +1,243 @@
+Übungen zu Softwareentwicklung 1 + 2
+
+Übung 1
+
+Erstellen Sie ein Programm, das folgende Ausgabe erzeugt: Java-Programme bestehen aus Klassen.
+Speichern Sie das Programm unter dem Namen ErsteAusgabe.java.
+Kompilieren Sie das Programm aus der Eingabeaufforderung heraus.
+Starten Sie das Programm aus der Eingabeaufforderung.
+Bauen Sie Fehler in das Programm ein. Schreiben Sie z. B. den Klassennamen anders als den Dateinamen, und umgekehrt.
+Kompilieren und starten Sie das Programm erneut. Löschen Sie gegebenenfalls fehlerhafte oder nicht-benötigte *.java- und *.class-Dateien.
+ 
+
+Übung 2
+
+Schreiben Sie ein Programm, welches den Konstanten NUMBER1 und NUMBER2 die Werte 12 und 4 zuordnet. Anschließend sollen die Summe, das Produkt, die Differenz und der Quotient berechnet und in geeigneten Variablen gespeichert werden. Geben Sie die jeweiligen Ergebnisse zur Kontrolle aus.
+
+Hinweis: Der Wert einer Ganzzahlvariablen x lässt sich zum Beispiel mittels System.out.printf("Wert von x ist %d\n", x); ausgeben.
+
+Was passiert, wenn Sie versuchen, die Werte der Konstanten im Programm zu ändern?
+ 
+
+Übung 3
+
+Welchen Wert liefern die folgenden Anweisungen für d und für e? Jede Anweisung übernimmt dabei die neuen Werte für d und e. (Bitte nicht programmieren).
+
+int d = 1, e = 2;
+d *= e;
+d += e++;
+d -= 3 - 2 * e;
+e /= (d + 1);
+
+Schreiben Sie ein Programm, das die Anweisungen aus Aufgabenteil 1 enthält und nach jede dieser Anweisungen die Namen und Werte der Variablen d und e ausgibt. Vergleichen Sie die Ausgabe mit Ihrer Lösung aus Aufgabenteil 1.
+ 
+
+Übung 4
+
+Der Lederwarenfabrikant "Leisetreter" benötigt ein Programm zur Klassifizierung von dreieckigen Reststücken. Dem Programm sollen beim Start die drei Seitenlängen (in cm, ganzzahlig) des jeweiligen Reststückes übergeben werden. Anhand der drei übergebenen Werte soll bestimmt werden, ob ein Dreieck (es gelte a <= b <= c)
+
+rechtwinkelig, (a² + b² = c²)
+gleichseitig, (a = b = c)
+gleichschenkelig, (a = b oder b = c)
+stumpfwinkelig, (a² + b²< c²)
+oder spitzwinkelig (a² + b²> c²)
+ist. Natürlich ist auch zu überprüfen, ob überhaupt ein Dreieck vorliegt. Ein Dreieck liegt dann vor, wenn alle Seiten eine positive Länge haben und die Summe der beiden kürzeren Seiten größer ist als die längere Seite.
+
+Hinweis:
+Beachten Sie, dass ein Dreieck z.B. gleichschenkelig und stumpfwinkelig sein kann!
+
+ 
+
+Übung 5
+
+Schreiben Sie ein Programm zur Berechnung der Summe der Zahlen 1 bis N, wobei N dem Programm beim Programmstart als Parameter übergeben wird. Geben Sie die Summe zur Kontrolle auf dem Bildschirm aus.
+
+ 
+
+Übung 6
+
+Definieren Sie eine Klasse Kreis mit dem Attribut Radius (Typ: double). Berücksichtigen Sie, dass der direkte Zugriff auf das Attribut von Außen nicht möglich sein sollte.
+
+Fügen Sie der Klasse geeignete Zugriffsfunktionen zu und zusätzlich Methoden zur Berechnung und Ergebnisrückgabe der Kreisfläche und des Kreisumfangs.
+
+Definieren Sie zum Testen der Klasse Kreis eine Klasse TestKreis und erzeugen Sie in dieser Klasse drei Kreise mit einem jeweils unterschiedlichen Radius. Geben Sie anschließend für jeden dieser drei Kreise den Radius, die Fläche und den Umfang auf dem Bildschirm aus.
+
+ 
+
+Übung 7
+
+Erzeugen Sie eine Klasse SomeMaths, die die Konstante pi (3.14159) und eine Funktion getSquare zum Quadrieren von Zahlen des Datentyps double bereitstellt.
+
+Ändern Sie die Klasse Kreis aus Übung 6 derart, dass die Klasse SomeMaths sinnvoll genutzt wird.
+
+Ergänzen Sie die Klasse Kreis um ein Attribut filled, das angibt, ob der Kreis gefüllt ist oder nicht. Ergänzen Sie die Ausgabe der Klasse TestKreis um den Text "Kreis ist gefüllt" oder "Kreis ist nicht gefüllt".
+
+Definieren Sie in der Klasse Kreis drei verschiedene Konstruktoren zur Erzeugung von Objekten auf Basis dieser Klasse:
+1. Konstruktor ohne Parameter (Radius = 1, Kreis nicht gefüllt)
+2. Konstruktor, bei dem der Radius angegeben wird (Kreis nicht gefüllt)
+3. Konstruktor, bei dem beide Attribute initialisiert werden
+
+ 
+
+Übung 8
+
+Definieren Sie eine Klasse Punkt mit den Attributen XKoordinate und YKoordinate.
+Definieren Sie eine Klasse Kreis2Dim (Kreis im 2-dimensionalen Koordinatensystem) mit den Attributen Radius, filled und Mittelpunkt.
+Schreiben Sie ein Testprogramm zum Testen der Klasse Kreis2Dim.
+ 
+
+�bung 9
+
+Definieren Sie eine Klasse OhneAttribute, die lediglich zwei statische Methoden enthält.
+
+Der ersten Methode soll als Eingangsparameter ein Wert vom Typ double übergeben werden, den die Methode dann mittels System.out.printf auf dem Bildschirm ausgeben soll. Zusätzlich soll die Methode einen Ergebniswert vom Typ der Klasse BlaBla zurück geben.
+
+Der zweiten Methode soll als Eingangsparameter ein Objekt vom Typ der Klasse BlaBla übergeben werden. Die Methode soll mittels System.out.println den Satz "Ich bin eine seltsame Methode." auf dem Bildschirm ausgeben. Die Methode soll keinen Ergebniswert besitzen.
+
+ 
+
+Übung 10
+
+Sortieren Sie die Namen Meier und Mayer über die Methode compareTo der Klasse String und geben Sie diese alphabetisch sortiert aus.
+Schreiben Sie eine Methode printLetter, die einen Namen als Parameter entgegen nimmt. In der Methode soll über die Klasse StringBuffer der folgende String zusammengesetzt und ausgegeben werden:
+Sehr geehrte(r) Frau/Herr <Name>,
+wir gratulieren Ihnen zur erfolgreichen Loesung der Uebungsaufgabe.
+
+Übung 11
+
+a) Definieren Sie eine Klasse Gewässer mit folgenden Eigenschaften (Attributen):
+
+Wasserart (Salzwasser oder Süßwasser)
+Tiefe (an der tiefsten Stelle)
+b) Definieren Sie eine Klasse Fluss mit folgenden Eigenschaften (Attributen):
+
+Wasserart (Salzwasser oder Süßwasser)
+Länge
+Tiefe (an der tiefsten Stelle)
+ 
+
+Übung 12
+
+Definieren Sie eine Klasse Zeit, die geeignete Methoden zum Ändern und Ermitteln einer gespeicherten Uhrzeit besitzt (Stunde, Minute).
+Leiten Sie von der Klasse Zeit eine abstrakte Klasse ZeitFormat ab, die eine abstrakte Methode zur Ausgabe der Zeitangabe auf der Konsole besitzt.
+Leiten Sie von der abstrakten Klasse ZeitFormat die Klassen ZeitFormat24 und ZeitFormat12 ab, und implementieren Sie dort jeweils die abstrakte Methode der Klasse ZeitFormat.
+Schreiben Sie eine Klasse TestZeit zum Testen der Ausgabemethoden.
+ 
+
+Übung 13
+
+Erstellen Sie ein Interface Media mit folgenden drei Methoden:
+play
+stop
+display
+Erstellen Sie drei Klassen Picture, Video, Audio, in der Sie die Methoden implementieren. Die Methoden sollen lediglich einen Text ausgeben, aus der der Name der Klasse einschließlich Package und der Name der Methode hervorgeht. Eine Methode, die in einer der Klassen nicht benötigt wird, soll zusätzlich "Nicht benötigt" ausgeben.
+
+Schreiben Sie eine Klasse TestMedia zum Testen der Media-Klassen.
+ 
+
+Übung 14
+
+Definieren Sie eine abstrakte Klasse Konto mit folgenden Eigenschaften (Attributen):
+Kontonummer
+Name des Inhabers
+Kontostand
+Definieren Sie eine Klasse Sparkonto mit folgenden Eigenschaften (Attributen):
+Kontonummer
+Name des Inhabers
+Kontostand
+Zinssatz
+Die Klasse Sparkonto soll eine Methode besitzen, die den Kontostand entsprechend des aktuellen Zinssatzes gemäß der Formel
+
+neuer Kontostand = alter Kontostand * (1 + Zinssatz)
+
+ändert.
+
+ 
+
+Übung 15
+
+Schreiben Sie eine Klasse Rechteck mit den beiden Attributen Laenge und Breite.
+
+Schreiben Sie eine Klasse RechteckSpeicher zur Speicherung von Rechtecken mit einer Breite von 1 bis 8 und einer Länge von ebenfalls 1 bis 8. Zur Speicherung der Rechtecke soll die Klasse als Attribut ein zweidimensionales Array besitzen. Die erste Dimension des Arrays soll der Breite des Rechtecks und die zweite Dimension der Länge des Rechtecks entsprechen.
+
+Schreiben Sie in der Klasse RechteckSpeicher eine Methode zum Speichern und eine Methode zum Laden eines Rechtecks.
+
+Schreiben Sie in der Klasse RechteckSpeicher eine main-Methode und erzeugen Sie in dieser mittels des Konstruktors der Klasse ein Objekt dieser Klasse.
+
+Testen Sie die Methoden speichern und laden.
+
+
+
+Übung 16
+
+Schreiben Sie eine Klasse Rechteck mit den Attributen Breite, 
+L�nge und Farbe und �berschreiben Sie sinnvoll die Methoden equals und hashcode.
+
+ 
+
+Übung 17
+
+Schreiben Sie eine Klasse zum Speichern von Integer-Werten. 
+Zur Speicherung der Werte soll die Klasse als Attribut eine ArrayList besitzen. Ferner soll die Klasse folgende Methoden beinhalten:
+
+Methode zum Speichern eines einzelnen int-Wertes
+Methode zum Speichern eines kompletten Arrays mit int-Werten
+Methode zum Löschen eines einzelnen int-Wertes
+Methode zur Feststellung, ob ein bestimmter int-Wert schon in der ArrayList gespeichert ist
+Methode zum aufsteigenden Sortieren der ArrayList
+ 
+
+Übung 18
+
+Schreiben Sie eine Klasse zum Speichern von Objekten der Klasse Rechteck. 
+Dabei sollen die Objekte in einer LinkedList gespeichert werden. Die Klasse soll folgende Methoden besitzen:
+
+Methode zum Speichern eines Objektes (Anhängen an die Liste)
+Methode zum Löschen eines Objektes
+Methode zur Ausgabe der Länge und Breite aller Rechteck-Objekte in der Liste mit Hilfe eines ListIterator-Objektes
+ 
+
+Übung 19
+
+Erzeugen Sie eine neue Exception NoBinaryNumberException, die von der Klasse RuntimeException abgeleitet ist. Sie soll neben den beiden Standardkonstruktoren einen weiteren Konstruktor besitzen, der einen String (eine Binärzahl in der Form "10001110") sowie die Position, die die Exception ausgelöst hat, entgegennimmt.
+
+Schreiben Sie eine Klasse ConvertBinary, die eine im String-Format übergebene Binärzahl in einen int-Typ umwandelt. Wird keine korrekte Zahl zur Umwandlung übergeben, soll eine Exception vom Typ NoBinaryNumberException ausgelöst werden.
+
+Schreiben Sie eine Klasse ConvertBinaryTest zum Testen der Umwandlung.
+
+ 
+
+Übung 20
+
+Einem Programm sollen zwei Parameter übergeben werden. Überprüfen Sie die korrekte Anzahl der Parameter über eine Assertion.
+
+Starten Sie das Programm mit und ohne Verwendung von Assertions.
+
+ 
+
+Übung 21
+
+Schreiben Sie die Zahlen von 1 bis 1000 und die jeweils zugehörige Quadratzahl in eine Datei quadratzahlen.dat.
+
+Lesen Sie die Werte wieder ein und geben die Daten in folgender Weise aus:
+. . .
+Quadrat von 25 = 625
+Quadrat von 26 = 676
+. . .
+
+ 
+
+Übung 22
+
+Erstellen Sie eine Anwendung zur Erfassung von Personendaten. Dazu sind über die Tastatur folgende Daten abzufragen: Name, Geschlecht, Größe (in cm) und Gewicht (in kg). Lesen Sie die Daten erst in einen Puffer und schreiben Sie die eingegebenen Werte dann in eine Datei.
+
+ 
+
+Übung 23
+
+Erstellen Sie eine Filterklasse MyFilterWriter, welche die Ausgaben in eine Datei so filtert, dass nur Groß- und Kleinbuchstaben in die Datei geschrieben werden. Alle anderen Zeichen sind durch das Zeichen * zu ersetzen. Gehen Sie dabei wie folgt vor:
+
+Leiten Sie Ihre Filterklasse von der abstrakten Klasse FilterWriter ab.
+Rufen Sie im Konstruktor Ihrer Filterklasse den Konstruktor der Superklasse mit dem übergebenen Writer-Objekt auf.
+Überschreiben Sie die drei write-Methoden der Klasse FilterWriter.
+Testen Sie Ihre Filterklasse in einem Programm FilterCharacters.java. Dazu soll über die Tastatur eine Zeichenkette eingegeben werden, die dann gefiltert in die Datei filter.dat geschrieben wird.
