@@ -1,16 +1,25 @@
-import java.io.*;          
+/**
+Übung 21
 
+Schreiben Sie die Zahlen von 1 bis 1000 und die jeweils zugehörige Quadratzahl in eine Datei quadratzahlen.dat.
+
+Lesen Sie die Werte wieder ein und geben die Daten in folgender Weise aus:
+. . .
+Quadrat von 25 = 625
+Quadrat von 26 = 676
+. . .
+ */
+import java.io.*;          
 public class QuadratNumbersFile {
 
     public static void main(String[] args) {
         
-        // SETUP
+        // SETUP: create a dir for the quadrats.dat file (optional)
 
         String path = "/Users/ben/Documents/02_Java/JAVA_SE2_SS20/JAVA_SE_2_hendrix/uebungen_SE2_hendrix/u21/"+File.separator+"dirForQuadrats";
         
         // create temp dir
         File dir = new File(path);
-
 
         if (dir.exists()) {
             System.out.println("\nDas Verzeichnis "+dir.getPath() + " existiert schon.");
@@ -44,32 +53,64 @@ public class QuadratNumbersFile {
 
 
         // CREATE QUADRATS
-
+        
 
         // WRTIE QUADRATS INTO FILE
 
+        String filePath = "/Users/ben/Documents/02_Java/JAVA_SE2_SS20/JAVA_SE_2_hendrix/uebungen_SE2_hendrix/u21/dirForQuadrats"+File.separator+"quadratzahlen.dat";
+
+        
+
+        RandomAccessFile quadratsFile;
+        // if (quadratsFile.exists())
+        // quadratsFile.delete();
+        try {
+            // Create + Write Quadrat numbers
+            quadratsFile = new RandomAccessFile(filePath, "rw");
+
+            String quad;
+            for(int i = 1; i<= 1000; i++){
+                quad = Integer.toString(i);
+                while (quad.length()<4){
+                    quad = " "+quad;
+                }
+                quadratsFile.writeBytes("Quadrat von\t" + quad + " = "+ i*i +"\n");
+            }
+            // Ausgabe in der Console: quick and not dirty
+            // quadratsFile.seek(0); // an den Dateianfang
+
+            // for (int i = 1; i <=1000; i++) { // 3 Zeilen lesen
+            //     System.out.println(quadratsFile.readLine());
+            // }
+               
+            quadratsFile.close();
+        }
+        catch (FileNotFoundException fnf) {
+            System.out.println(fnf.getMessage());
+        }
+        catch (IOException io) {
+            System.out.println(io.getMessage());
+        }
 
 
-        // RandomAccessFile quadratsFile;
-        // try {
-        // quadratsFile = new RandomAccessFile("quadratzahlen.dat", "rw");
-        // quadratsFile.writeBytes("AAAAA\nBBBBB\nCCCCC\n");
-        // quadratsFile.seek(0); // an den Dateianfang
-        // for (int i = 1; i <=3; i++) { // 3 Zeilen lesen
-        // System.out.println(quadratsFile.readLine());
-        // }
-        // quadratsFile.writeBytes("DDDDD\nEEEEE\nFFFFF\n");
-        // quadratsFile.seek(0);
-        // for (int i = 1; i <=6; i++) { // 6 Zeilen lesen
-        // System.out.println(quadratsFile.readLine());
-        // }
-        // quadratsFile.close();
-        // }
-        // catch (FileNotFoundException fnf) {
-        // System.out.println(fnf.getMessage());
-        // }
-        // catch (IOExceotion io) {
-        // System.out.println(io.getMessage());
-        // }
+        //Read Quadrats numbers to StringBuffer br with new File
+
+        RandomAccessFile quadratFileRead;
+        StringBuffer quadratsBuffer = new StringBuffer();
+        try {
+            quadratFileRead = new RandomAccessFile(filePath, "r");
+            quadratFileRead.seek(0); // an den Dateianfang
+
+            for (int i = 1; i <=1000; i++) { // 3 Zeilen lesen
+                quadratsBuffer.append(quadratFileRead.readLine());
+                quadratsBuffer.append("\n");
+            }
+            quadratFileRead.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        // print quadrats in one output
+        System.out.println(quadratsBuffer.toString());
     }
 }

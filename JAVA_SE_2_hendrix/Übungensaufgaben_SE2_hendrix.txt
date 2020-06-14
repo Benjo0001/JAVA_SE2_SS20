@@ -229,7 +229,9 @@ Quadrat von 26 = 676
 
 Übung 22
 
-Erstellen Sie eine Anwendung zur Erfassung von Personendaten. Dazu sind über die Tastatur folgende Daten abzufragen: Name, Geschlecht, Größe (in cm) und Gewicht (in kg). Lesen Sie die Daten erst in einen Puffer und schreiben Sie die eingegebenen Werte dann in eine Datei.
+Erstellen Sie eine Anwendung zur Erfassung von Personendaten. 
+Dazu sind über die Tastatur folgende Daten abzufragen: Name, Geschlecht, Größe (in cm) und Gewicht (in kg). 
+Lesen Sie die Daten erst in einen Puffer und schreiben Sie die eingegebenen Werte dann in eine Datei.
 
  
 

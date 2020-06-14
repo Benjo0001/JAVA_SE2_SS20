@@ -1,0 +1,28 @@
+Kapitel im JAV9 Buch lesen welches nicht in Ergänzungen noch mal aufgegriffen wurde!
+
+
+File
+https://docs.oracle.com/javase/7/docs/api/java/io/File.html
+
+RandomAccessFile
+https://docs.oracle.com/javase/7/docs/api/java/io/RandomAccessFile.html#writeUTF(java.lang.String)
+
+Deleting a File or Directory
+https://docs.oracle.com/javase/tutorial/essential/io/delete.html
+
+        The delete(Path) method deletes the file or throws an exception if the deletion fails. For example, if the file does not exist a NoSuchFileException is thrown. You can catch the exception to determine why the delete failed as follows:
+
+        try {
+            Files.delete(path);
+        } catch (NoSuchFileException x) {
+            System.err.format("%s: no such" + " file or directory%n", path);
+        } catch (DirectoryNotEmptyException x) {
+            System.err.format("%s not empty%n", path);
+        } catch (IOException x) {
+            // File permission problems are caught here.
+            System.err.println(x);
+        }
+        The deleteIfExists(Path) method also deletes the file, but if the file does not exist, no exception is thrown. 
+        Failing silently is useful when you have multiple threads deleting 
+        files and you don't want to throw an exception just because one thread did so first.
+

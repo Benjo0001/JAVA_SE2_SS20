@@ -4,9 +4,11 @@
  * File where you can at any time jump to a position of choice
  * and start read or write from the position you jump to
  * 
+ * * ADVANCED/Effektive way of using RandomeAcessFile 
  * 
  * each character is a byte
  * each new line is 2 bytes
+ * 
  * 
  * PROs:
  *      really good for performance
