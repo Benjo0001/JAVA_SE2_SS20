@@ -11,7 +11,7 @@ class Calculator {                      // Super-class (JAVA-context)  / Parent 
         return i+j;
     }
     InputField f = new InputField();
-}wjbflwbrf
+}
 
 // extended Version of calculator (has even all functions of calculator version1)
 // single level inheritance
