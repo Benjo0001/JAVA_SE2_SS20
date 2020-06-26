@@ -15,11 +15,12 @@ public class QuadratNumbersFile {
     public static void main(String[] args) {
         
         // SETUP: create a dir for the quadrats.dat file (optional)
-
-        String path = "/Users/ben/Documents/02_Java/JAVA_SE2_SS20/JAVA_SE_2_hendrix/uebungen_SE2_hendrix/u21/"+File.separator+"dirForQuadrats";
+ 
+        String path = "/Users/ben/Documents/02_Java/JAVA_SE2_SS20/JAVA_SE_2_hendrix/uebungen_SE2_hendrix/u21"+File.separator+"dirForQuadrats";
         
         // create temp dir
         File dir = new File(path);
+        //path = "/Users/ben/Documents/02_Java/JAVA_SE2_SS20/JAVA_SE_2_hendrix/uebungen_SE2_hendrix/u21"+File.separator+"dirForQuadrats222";  useless: after initialising
 
         if (dir.exists()) {
             System.out.println("\nDas Verzeichnis "+dir.getPath() + " existiert schon.");
@@ -57,7 +58,8 @@ public class QuadratNumbersFile {
 
         // WRTIE QUADRATS INTO FILE
 
-        String filePath = "/Users/ben/Documents/02_Java/JAVA_SE2_SS20/JAVA_SE_2_hendrix/uebungen_SE2_hendrix/u21/dirForQuadrats"+File.separator+"quadratzahlen.dat";
+        // String filePath = path+"/hierNichtDuLutscher"+File.separator+"quadratzahlen.dat";
+        String filePath = path+File.separator+"quadratzahlen.dat";
 
         
 
@@ -93,6 +95,9 @@ public class QuadratNumbersFile {
         }
 
 
+
+
+
         //Read Quadrats numbers to StringBuffer br with new File
 
         RandomAccessFile quadratFileRead;
@@ -105,6 +110,10 @@ public class QuadratNumbersFile {
                 quadratsBuffer.append(quadratFileRead.readLine());
                 quadratsBuffer.append("\n");
             }
+
+            //Test lese Zeile 100
+            quadratFileRead.seek(99); 
+            System.out.println("Test Zeile"+ quadratFileRead.readLine());
             quadratFileRead.close();
         } catch (Exception e) {
             e.printStackTrace();
