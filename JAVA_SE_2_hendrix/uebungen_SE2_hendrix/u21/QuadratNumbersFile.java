@@ -113,4 +113,4 @@ public class QuadratNumbersFile {
         // print quadrats in one output
         System.out.println(quadratsBuffer.toString());
     }
-}
+} //Hier bin ich
