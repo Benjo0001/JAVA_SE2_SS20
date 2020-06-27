@@ -1,4 +1,4 @@
-package uebungen_SE2_hendrix.u16;
+// package uebungen_SE2_hendrix.u16;
 import java.util.Objects;
 
 public class Rechteck {
