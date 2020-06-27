@@ -1,4 +1,7 @@
 /**
+ * 
+ * https://www.youtube.com/watch?v=d3QbptJRln4  -   Jakob Jenkov
+ * 
  * https://www.youtube.com/watch?v=zotAs4v9jH4     - InformatikZentrale
  * 
  * Listen - Eigenschaften
@@ -7,6 +10,7 @@
  * 
  */
 import java.util.ArrayList;
+import java.util.*;
 public class ArrayListMethods {
     public static void main(String[] args) {
         ArrayList<String> friendsList = new ArrayList<>();
@@ -66,6 +70,15 @@ public class ArrayListMethods {
         System.out.println(testInt);
 
         
+        // unspezific list -> all types are allowed: no good style for programming, but possible
+        List myList = new ArrayList();
+        myList.add("Test");
+        myList.add(1);
+        myList.add(2);
+        myList.add(3);
+        //typecasting needed if copy / modify (because ArrayList has no spezific Object type)
+        String var2 = (String)(myList.get(0));
+        System.out.println(myList);
     }
 
 
