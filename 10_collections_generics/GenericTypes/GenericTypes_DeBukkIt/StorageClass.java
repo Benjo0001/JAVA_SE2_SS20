@@ -1,12 +1,12 @@
 //                      <T, T2> für type -> data type of this variable
 public class StorageClass <T, T2>{
     
-    // private int storage;
+    // herkömmliche Variante
 
+    // private int storage;
     // public StorageClass(int dataToSafe){
     //     setStorage(dataToSafe);
     // }
-
     // public int getStorage() {
     //     return storage;
     // }

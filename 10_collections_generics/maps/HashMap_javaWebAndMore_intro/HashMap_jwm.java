@@ -4,6 +4,10 @@
  * 
  HashMap<String, String> m = new HashMap<String, String>();
  *
+ * 
+ * BSP: Mehrsprachigkeit -> Bezeichnung zeigt auf language path
+ *    
+ *                       dieser kann hier in verschiedenen Sprachen angepasst werden
  * Tutorial: JavaWebAndMore
  * https://www.youtube.com/watch?v=XnPTJIQhsiY
  */
@@ -18,11 +22,14 @@ public class HashMap_jwm {
     public static void main(String[] args) {
         
         System.out.println("\n\n");
+        
+        //example: multi language gamge
 
         HashMap<String, String> deutsch = new HashMap<String, String>();
         deutsch.put("mmenu", "Hauptmenü");
         deutsch.put("sstart", "1) Spiel Starten");
         deutsch.put("exit", "Beenden");
+        deutsch.put("exit", "Beenden2");     // mehrfach Hinzufügen erzeugt keinen Fehler, es überschreibt in dem Fall einfach das vorhandene Object
 
         HashMap<String, String> english = new HashMap<String, String>();
         english.put("mmenu", "Main Menu");

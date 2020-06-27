@@ -11,6 +11,7 @@ import java.util.HashSet;
 public class HashSet_morpheus {
     public static void main(String[] args) {
        HashSet<String> h = new HashSet<String>(); 
+       
        // Elemente werden möglichst effizient eingetragen, ungeordnet
        h.add("Hallo");
        h.add("Hallo");
