@@ -53,8 +53,9 @@ public class PersonData {
 
     public static void main(String[] args) throws IOException {
         PersonData p1 = new PersonData();
-        String filePath = "persons.dat";
+        String filePath = "rsc"+File.separator+"persondata"+File.separator+"persons.dat";
         PrintWriter writer = new PrintWriter(new FileWriter(filePath));
+        //PrintWriter writer = new PrintWriter(filePath);
 
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -78,13 +79,12 @@ public class PersonData {
             } catch (Exception e) {
                 System.out.println("Fehlerhafte Eingabe: " + e.getMessage());
             }
+            
+            writer.close();
 
-        } catch (Exception e) {
-            //TODO: handle exception
+        } catch (IOException e) {
+           System.out.println("Fehler: "+e.getMessage());
         }
-
-        // DOES NOT WORK: writer did not write into file..
-        // ... try later
 
     }
 }

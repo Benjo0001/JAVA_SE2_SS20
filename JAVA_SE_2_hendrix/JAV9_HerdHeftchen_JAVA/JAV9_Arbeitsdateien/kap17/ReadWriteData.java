@@ -11,7 +11,7 @@ public class ReadWriteData
     try
     {
       //String path = String.format("com%1$sherdt%1$sjava9%1$skap17%1$s", File.separator);
-      String path = String.format("testData", File.separator);
+      String path = "testData"+File.separator;
       PrintWriter writer = new PrintWriter(new FileWriter(path + "personal.dat"));
       while (more.equals("j"))
       {
