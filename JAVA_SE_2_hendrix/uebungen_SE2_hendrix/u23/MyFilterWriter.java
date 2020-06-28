@@ -14,6 +14,10 @@ Alle anderen Zeichen sind durch das Zeichen * zu ersetzen. Gehen Sie dabei wie f
 
 Testen Sie Ihre Filterklasse in einem Programm FilterCharacters.java. 
 Dazu soll über die Tastatur eine Zeichenkette eingegeben werden, die dann gefiltert in die Datei filter.dat geschrieben wird.
+
+
+ * siehe auch: /Users/ben/Documents/02_Java/JAVA_SE2_SS20/JAVA_SE_2_hendrix/JAV9_HerdHeftchen_JAVA/JAV9_Arbeitsdateien/kap17/MyFilterWriter.java
+ * 
  */
 public class MyFilterWriter {
     

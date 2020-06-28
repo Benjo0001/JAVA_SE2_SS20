@@ -1,4 +1,4 @@
-package com.herdt.java9.kap17;
+//package com.herdt.java9.kap17;
 
 import java.io.*;
 import static java.lang.System.*;
@@ -10,7 +10,8 @@ public class ReadWriteData
     String more = "j";
     try
     {
-      String path = String.format("com%1$sherdt%1$sjava9%1$skap17%1$s", File.separator);
+      //String path = String.format("com%1$sherdt%1$sjava9%1$skap17%1$s", File.separator);
+      String path = String.format("testData", File.separator);
       PrintWriter writer = new PrintWriter(new FileWriter(path + "personal.dat"));
       while (more.equals("j"))
       {

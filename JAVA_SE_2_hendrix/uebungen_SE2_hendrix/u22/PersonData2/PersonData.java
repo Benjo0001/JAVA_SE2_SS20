@@ -11,7 +11,7 @@ Lesen Sie die Daten erst in einen Puffer und schreiben Sie die eingegebenen Wert
  */
 
 import java.io.*;
-import java.util.Locale;
+import static java.lang.System.*;
 
 public class PersonData {
     private String name;
@@ -53,33 +53,38 @@ public class PersonData {
 
     public static void main(String[] args) throws IOException {
         PersonData p1 = new PersonData();
+        String filePath = "persons.dat";
+        PrintWriter writer = new PrintWriter(new FileWriter(filePath));
 
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         
-        System.out.print("\nEnter your name: ");
-        //String name = reader.readLine();
-        p1.setName(reader.readLine());
+            System.out.print("\nEnter your name: ");
+            //String name = reader.readLine();
+            p1.setName(reader.readLine());
+    
+            System.out.print("\nEnter your gender: ");
+            p1.setGender(reader.readLine());
+    
+            System.out.print("\nEnter your heigth (in m): "); 
+            p1.setHeigth(Double.parseDouble((reader.readLine())) );
+            
+            try {
+                //write person data in file
+                writer.println(p1.getName());
+                writer.println(p1.getGender());
+                writer.println(Double.toString(p1.getHeigth()));
 
-        System.out.print("\nEnter your gender: ");
-        p1.setGender(reader.readLine());
+            } catch (Exception e) {
+                System.out.println("Fehlerhafte Eingabe: " + e.getMessage());
+            }
 
-        System.out.print("\nEnter your heigth (in m): "); 
-        p1.setHeigth(Double.parseDouble((reader.readLine())) );
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
 
-        //write person data in file
-        PersonFileWriter.writePersonData(p1);
-        
-        
-        //output - fast 
-        // System.out.println("\n------------------------");
-        // System.out.println("Your name is: " + p1.getName());
-        // System.out.println("Your gender is: " + p1.getGender());
-        
-        // // format hight value with zero in the end (0.00 m)
-        // //System.out.println("Your heigth is: " + String.format(Locale.ENGLISH, "%1.2f", p1.getHeigth()) + " m");
-        // System.out.printf("Your heigth is: %1.2f m", p1.getHeigth());
-        // System.out.println("\n------------------------\n");
-
+        // DOES NOT WORK: writer did not write into file..
+        // ... try later
 
     }
 }
