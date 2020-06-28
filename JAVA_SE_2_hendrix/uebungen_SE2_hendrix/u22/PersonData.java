@@ -49,6 +49,8 @@ public class PersonData {
         return name;
     }
 
+    // write Data Into File
+
     public static void main(String[] args) throws IOException {
         PersonData p1 = new PersonData();
 
@@ -64,17 +66,19 @@ public class PersonData {
         System.out.print("\nEnter your heigth (in m): "); 
         p1.setHeigth(Double.parseDouble((reader.readLine())) );
 
+        //write person data in file
+        PersonFileWriter.writePersonData(p1);
 
-        // format the decimal format
-    
-        System.out.println("\n------------------------");
-        System.out.println("Your name is: " + p1.getName());
-        System.out.println("Your gender is: " + p1.getGender());
         
-        // format hight value with zero in the end (0.00 m)
-        //System.out.println("Your heigth is: " + String.format(Locale.ENGLISH, "%1.2f", p1.getHeigth()) + " m");
-        System.out.printf("Your heigth is: %1.2f m", p1.getHeigth()));
-        System.out.println("------------------------\n");
+        //output - fast 
+        // System.out.println("\n------------------------");
+        // System.out.println("Your name is: " + p1.getName());
+        // System.out.println("Your gender is: " + p1.getGender());
+        
+        // // format hight value with zero in the end (0.00 m)
+        // //System.out.println("Your heigth is: " + String.format(Locale.ENGLISH, "%1.2f", p1.getHeigth()) + " m");
+        // System.out.printf("Your heigth is: %1.2f m", p1.getHeigth());
+        // System.out.println("\n------------------------\n");
 
 
     }

@@ -9,7 +9,8 @@ Quadrat von 25 = 625
 Quadrat von 26 = 676
 . . .
  */
-import java.io.*;          
+import java.io.*;
+import java.util.Iterator;          
 public class QuadratNumbersFile {
 
     public static void main(String[] args) {
@@ -106,15 +107,18 @@ public class QuadratNumbersFile {
             quadratFileRead = new RandomAccessFile(filePath, "r");
             quadratFileRead.seek(0); // an den Dateianfang
 
-            for (int i = 1; i <=1000; i++) { // 3 Zeilen lesen
+            // 1000 Zeilen vom file ausgeben
+            for (int i = 1; i < 1000; i++) { // 3 Zeilen lesen
                 quadratsBuffer.append(quadratFileRead.readLine());
                 quadratsBuffer.append("\n");
             }
 
-            //Test lese Zeile 100
-            quadratFileRead.seek(99); 
-            System.out.println("Test Zeile"+ quadratFileRead.readLine());
+            //Test: Lese Zeile 100 aus (Quadratzahl von 100)
+            // quadratFileRead.seek(0); 
+            // while(quadratFileRead.hasNext())
+            // System.out.println("Test Zeile"+ quadratFileRead.readLine());
             quadratFileRead.close();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
