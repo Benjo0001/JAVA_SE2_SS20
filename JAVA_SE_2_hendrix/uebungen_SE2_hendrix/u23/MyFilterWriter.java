@@ -1,3 +1,5 @@
+import java.io.FilterWriter;
+
 /**
 Übung 23
 
@@ -19,6 +21,10 @@ Dazu soll über die Tastatur eine Zeichenkette eingegeben werden, die dann gefil
  * siehe auch: /Users/ben/Documents/02_Java/JAVA_SE2_SS20/JAVA_SE_2_hendrix/JAV9_HerdHeftchen_JAVA/JAV9_Arbeitsdateien/kap17/MyFilterWriter.java
  * 
  */
-public class MyFilterWriter {
+public class MyFilterWriter extends FilterWriter {
+
+    MyFilterWriter(){
+        super();
+    }
     
 }
