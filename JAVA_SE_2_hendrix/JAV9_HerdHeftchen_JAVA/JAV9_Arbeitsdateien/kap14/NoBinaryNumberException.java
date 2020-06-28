@@ -1,4 +1,4 @@
-package com.herdt.java9.kap14;
+// package com.herdt.java9.kap14;
 
 class NoBinaryNumberException extends RuntimeException
 {
